@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js" integrity="sha256-XDU6Po3hKjdQXJHRrKrWlIF/E6y6BBgV5eiqZSYePpo=" crossorigin="anonymous"></script>
+	<link href="/styles/mainTGIF.css" type="text/css" rel="stylesheet">
+</head>
+
+<body id="attendance" data-location="house">
+	<div class="container">
+
+
+		<header>
+			<div id="headertop">
+				<div>
+					<img class="logo" src="/media/magnify-glass-clipart-magnifying-glass-clip-art-vector-images-amp-illustrations-magnifying-glass-clipart-414_414.jpg" alt="TGIF logo">
+				</div>
+				<div class="topright">
+					<img class="envelope" src="/media/envelope_PNG18382.png" alt="envelope">
+					<a class="contact" href="mailto:info@tgif.net?subject=TGIF%20Questions&body">info@tgif.net</a>
+				</div>
+			</div>
+			<div id="headerBottom">
+				<nav>
+					<ul style="list-style: none;">
+						<li><a href="/index.html">Home</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="/html/senate-data.html">Senate</a></li>
+								<li><a href="/html/house-data.html">House of Congress</a></li>
+							</ul>
+						</li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="/html/senate-att.html">Senate</a></li>
+								<li><a href="/html/house-att.html">House of Congress</a></li>
+							</ul>
+						</li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="/html/senate-loyalty.html">Senate</a></li>
+								<li><a href="/html/house-loyalty.html">House of Congress</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+
+
+
+		<div id="attendanceAtAGlance">
+			<div class="attendance">
+				<h2>Attendance</h2>
+				<p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
+				<p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
+			</div>
+			<div id="atAGlance">
+
+				<h2>House at a glance</h2>
+				<table class="tableatt">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th># of Reps.</th>
+							<th>% Voted with the party</th>
+						</tr>
+					</thead>
+					<tbody id="senateAtt"></tbody>
+				</table>
+			</div>
+		</div>
+
+		<div id="bottomTable">
+			<div id="left">
+				<h2>Least Engaged (Bottom 10% )</h2>
+				<table id="t1">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th># Missed votes</th>
+							<th>% Missed </th>
+						</tr>
+					</thead>
+					<tbody id="senateleng"></tbody>
+				</table>
+			</div>
+			<div id="right">
+				<h2>Most Engaged (Top 10% )</h2>
+				<table id="t2">
+					<thead>
+						<tr>
+							<th>Party</th>
+							<th># Missed Votes </th>
+							<th>% Missed</th>
+						</tr>
+					</thead>
+					<tbody id="senatemeng"></tbody>
+				</table>
+
+			</div>
+		</div>
+
+		<footer class="footer">
+			<p> &#9400; 2016 TGIF | All rights reserved</p>
+		</footer>
+		<script type="text/html" id="dataTemplate">
+			<tr>
+				<td><a href="{{url}}">{{{first_name}}} {{middle_name}} {{last_name}}</a></td>
+				<td>{{number}}</td>
+				<td>{{percent}}</td>
+			</tr>
+		</script>
+	</div>
+	<script src="/js/house.js" type="text/javascript"></script>
+	<script src="/js/statistics.js"></script>
+</body>
+<script src="/js/stats.js" type="text/javascript"></script>
+
+</html>

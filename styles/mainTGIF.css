@@ -1,0 +1,238 @@
+body {
+	font-size: 62.5%;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+
+#headertop {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav.clone {
+  position: fixed;
+	background-color: #e7ebd8;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+  transition: 0.4s transform cubic-bezier(.3,.73,.3,.74);
+}
+
+
+body.down nav.clone {
+  transform: translateY(0);
+}
+
+.topright {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	margin-right: 60px;
+	font-size: 3em;
+}
+
+.logo {
+	height: 60px;
+	width: auto;
+}
+
+.envelope {
+	height: 40px;
+	width: auto;
+	margin-right: 20px;
+}
+
+nav {
+	background-color: #e7ebd8;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+nav ul {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	font-size: 3.5em;
+	margin-left: 2%;
+}
+
+nav ul li {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+nav a {
+	width: 100%;
+}
+
+.dropdown {
+	margin-left: 20px;
+}
+
+.aboutData {
+	width: 70%;
+}
+
+.aboutData h2 {
+	margin-left: 2%;
+	display: block;
+}
+
+.aboutData p {
+	font-size: 3em;
+	margin-left: 2%;
+}
+
+.aboutTGIF {
+	margin-top: 50px;
+	margin-right: 50px;
+	width: 100%;
+}
+
+.aboutTGIF p {
+	font-size: 3em;
+}
+
+.attendance p {
+	display: flex;
+	font-size: 3em;
+	width: 90%;
+}
+
+label {
+	font-size: 3em;
+}
+
+.panel {
+	border: none;
+}
+
+.panel-body {
+	border-top: none !important;
+}
+
+.picMagGlass {
+	display: flex;
+	align-items: center;
+}
+
+.picMagGlass img {
+	height: 300px;
+	width: auto;
+}
+
+.combinedTextAndPicture {
+	display: flex;
+	justify-content: space-between;
+}
+
+.filtering {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#checkboxes label {
+	margin-right: 50px;
+}
+
+.parties {
+	display: flex;
+}
+
+#bottomTable {
+	display: flex;
+}
+
+#bottom {
+	display: flex;
+}
+
+#left {
+	text-align: center;
+	width: 100%;
+}
+
+#t1 {
+	width: 90%;
+}
+
+#t1 tr {
+	height: 35px;
+}
+
+#t2 {
+	width: 90%;
+}
+
+#right {
+	text-align: center;
+	width: 100%;
+}
+
+#t2 tr {
+	height: 35px;
+}
+
+table {
+	font-size: 3em;
+}
+
+.tableatt {
+	width: 100%;
+}
+
+.tableatt tr {
+	height: 35px;
+}
+
+#atAGlance {
+	text-align: center;
+}
+
+#attendanceAtAGlance {
+	display: flex;
+}
+
+#attendanceAtAGlance>* {
+	flex-basis: 50%;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+thead tr {
+	background-color: #e7ebd8;
+}
+
+tr:hover {
+	background-color: #e7ebd8;
+}
+
+table * {
+	border-top: none !important;
+	text-align: center;
+}
+
+footer {
+	background-color: #e7ebd8;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3.5em;
+}
+
+footer p {
+	margin: 0;
+}

@@ -1,0 +1,40 @@
+function getTenPerc(inputArray, sortingKey, sort) {
+	inputArray.sort(sort);
+	var number = 0;
+	var lowest = [];
+	// Get ten percent
+	// Check the next values until one diff valu is found
+	for (var i = 0; i < inputArray.length; i++) {
+		var current = inputArray[i][sortingKey];
+		for (var j = i; j < inputArray.length; j++) {
+			var second = inputArray[j][sortingKey];
+			if (current == second) {
+				if (!lowest.includes(inputArray[j])) {
+					number++;
+					lowest.push(inputArray[j]);
+				}
+				if (number >= (inputArray.length / 10)) {
+					if (inputArray[i][sortingKey] != inputArray[j + 1][sortingKey]) {
+						return lowest;
+					}
+				}
+			}
+		}
+	}
+}
+
+function getTenPerc(inputArray, sortingKey, sort) {
+	inputArray.sort(sort);
+	var number = 0;
+	var lowest = [];
+	for (var i = 0; i < inputArray.length; i++) {
+		if (number <= (inputArray.length / 10)) {
+			number++;
+			lowest.push(inputArray[i]);
+		} else if (inputArray[i][sortingKey] == inputArray[i - 1][sortingKey]) {
+			lowest.push(inputArray[i]);
+		} else {
+			return lowest;
+		}
+	}
+}

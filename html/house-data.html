@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js" integrity="sha256-XDU6Po3hKjdQXJHRrKrWlIF/E6y6BBgV5eiqZSYePpo=" crossorigin="anonymous"></script>
+	<link href="/styles/mainTGIF.css" type="text/css" rel="stylesheet">
+</head>
+
+<body id="dataPageHouse">
+	<div class="container">
+		<header>
+			<div id="headertop">
+				<div>
+					<img class="logo" src="/media/magnify-glass-clipart-magnifying-glass-clip-art-vector-images-amp-illustrations-magnifying-glass-clipart-414_414.jpg" alt="TGIF logo">
+				</div>
+				<div class="topright">
+					<img class="envelope" src="/media/envelope_PNG18382.png" alt="envelope">
+					<a class="contact" href="mailto:info@tgif.net?subject=TGIF%20Questions&body">info@tgif.net</a>
+				</div>
+			</div>
+			<div>
+				<nav>
+					<ul style="list-style: none;">
+						<li><a href="/index.html">Home</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="/html/senate-data.html">Senate</a></li>
+								<li><a href="/html/house-data.html">House of Congress</a></li>
+							</ul>
+						</li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="/html/senate-att.html">Senate</a></li>
+								<li><a href="/html/house-att.html">House of Congress</a></li>
+							</ul>
+						</li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="/html/senate-loyalty.html">Senate</a></li>
+								<li><a href="/html/house-loyalty.html">House of Congress</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="aboutData">
+			<h2>Congressmen</h2>
+			<p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+			<p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
+		</div>
+		<div id="checkboxes">
+			<label><input type="checkbox" id="r"> Republican</label>
+			<label><input type="checkbox" id="d"> Democrat</label>
+			<label><input type="checkbox" id="i"> Independent</label>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th><input type="checkbox" name="option" value="y" id="sortByName"> Name</th>
+					<th>Party</th>
+					<th>State <select id="stateDropDown"></select></th>
+					<th><input type="checkbox" name="option1" value="y" id="office"> Years in Office</th>
+					<th><input type="checkbox" name="option1" value="y" id="votes"> % Votes w/Party</th>
+				</tr>
+			</thead>
+			<tbody id="senate-data"></tbody>
+		</table>
+		<footer class="footer">
+			<p> &#9400; 2016 TGIF | All rights reserved</p>
+		</footer>
+	</div>
+	
+	
+	<!--Start template for the mustache table -->
+		<script type="text/html" id="dataTemplate">
+			<tr>
+				<td><a href="{{url}}">{{first_name}} {{middle_name}} {{last_name}}</a></td>
+				<td>{{party}}</td>
+				<td>{{state}}</td>
+				<td>{{seniority}}</td>
+				<td>{{votes_with_party_pct}}</td>
+			</tr>
+		</script>
+<!--End template for the mustache table -->
+	<script src="/js/house.js" type="text/javascript"></script>
+</body>
+<script src="/js/datamain.js" type="text/javascript"></script>
+
+</html>
